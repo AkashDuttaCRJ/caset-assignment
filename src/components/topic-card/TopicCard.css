@@ -1,0 +1,47 @@
+.topic-card {
+    min-width: 120px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .topic-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .topic-card:hover img {
+    transform: scale(1.15);
+  }
+  
+  .topic-card:hover .topic-card-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .topic-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .topic-title {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    user-select: none;
+  }

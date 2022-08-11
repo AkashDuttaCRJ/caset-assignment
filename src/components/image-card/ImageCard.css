@@ -1,0 +1,35 @@
+.image-card {
+    width: 200px;
+    aspect-ratio: 3 / 4;
+    background-color: #fff;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.image-card .image-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    aspect-ratio: 1 / 1;
+}
+
+.image-card .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .image-card {
+        width: 150px;
+    }
+}
