@@ -16,7 +16,11 @@ const Search = () => {
 
   return (
     <div className='search-container'>
-        <input type="text" placeholder='Search for Photos' value={term} onChange={(e) => setTerm(e.target.value)} />
+        <input type="text" 
+          placeholder='Search for Photos' 
+          value={term} 
+          onChange={(e) => setTerm(e.target.value)}
+          onKeyUp={(e) => e.key === 'Enter' && handleSearch()} />
         <button onClick={handleSearch}>
           <img src='/search.svg' alt='search' />
         </button>
